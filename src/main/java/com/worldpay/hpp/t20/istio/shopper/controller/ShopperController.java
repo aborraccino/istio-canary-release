@@ -7,8 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 public class ShopperController {
@@ -25,12 +28,16 @@ public class ShopperController {
         shops.put(s1.getId(), s1);
         shops.put(s2.getId(), s2);
         shops.put(s3.getId(), s3);
-
     }
 
     @GetMapping("/shops/{shopId}")
     public Shop getShopDetails(@PathVariable String shopId) {
         return shops.get(shopId);
+    }
+
+    @GetMapping("/shops/")
+    public List<Shop> getShops() {
+        return new ArrayList<>(shops.values());
     }
 
 }
