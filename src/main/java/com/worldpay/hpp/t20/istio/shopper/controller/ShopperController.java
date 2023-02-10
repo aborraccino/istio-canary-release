@@ -25,9 +25,12 @@ public class ShopperController {
         Shop s2 = new Shop("OTDD422", "cat@shop.it", "07851123456", "Science Park, 270 Milton Rd, Milton, Cambridge CB4 0WE");
         Shop s3 = new Shop("AQSW165", "home@shop.it", "07851123456", "Science Park, 270 Milton Rd, Milton, Cambridge CB4 0WE");
 
+        Shop s4 = new Shop("AQSW165", "restaurant@shop.it", "07851123456", "Science Park, 270 Milton Rd, Milton, Cambridge CB4 0WE", "Food");
+
         shops.put(s1.getId(), s1);
         shops.put(s2.getId(), s2);
         shops.put(s3.getId(), s3);
+        shops.put(s4.getId(), s4);
     }
 
     @GetMapping("/shops/{shopId}")

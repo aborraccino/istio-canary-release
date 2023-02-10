@@ -39,4 +39,4 @@ jib {
 	}
 }
 jib.to.image = 'shopper'
-jib.to.tags = ['1.0']
+jib.to.tags = ['2.0']

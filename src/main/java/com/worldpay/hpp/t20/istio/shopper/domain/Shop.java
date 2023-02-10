@@ -6,6 +6,7 @@ public class Shop {
     private String email;
     private String tel;
     private String address;
+    private String category;
 
     public Shop(String id, String email, String telephone, String address) {
 
@@ -13,6 +14,15 @@ public class Shop {
         this.email = email;
         this.tel = telephone;
         this.address = address;
+    }
+
+    public Shop(String id, String email, String telephone, String address, String category) {
+
+        this.id = id;
+        this.email = email;
+        this.tel = telephone;
+        this.address = address;
+        this.category = category;
     }
 
     public String getId() {
@@ -45,5 +55,13 @@ public class Shop {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
