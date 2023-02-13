@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 @RestController
 public class ShopperController {
@@ -25,7 +24,8 @@ public class ShopperController {
         Shop s2 = new Shop("OTDD422", "cat@shop.it", "07851123456", "Science Park, 270 Milton Rd, Milton, Cambridge CB4 0WE");
         Shop s3 = new Shop("AQSW165", "home@shop.it", "07851123456", "Science Park, 270 Milton Rd, Milton, Cambridge CB4 0WE");
 
-        Shop s4 = new Shop("AQSW165", "restaurant@shop.it", "07851123456", "Science Park, 270 Milton Rd, Milton, Cambridge CB4 0WE", "Food");
+        // fix it and repush
+        Shop s4 = new Shop("RST1656", "restaurant@shop.it", "07851123456", "Science Park, 270 Milton Rd, Milton, Cambridge CB4 0WE", "Food");
 
         shops.put(s1.getId(), s1);
         shops.put(s2.getId(), s2);
@@ -35,11 +35,13 @@ public class ShopperController {
 
     @GetMapping("/shops/{shopId}")
     public Shop getShopDetails(@PathVariable String shopId) {
+        logger.info("get shopper details, id={}", shopId);
         return shops.get(shopId);
     }
 
     @GetMapping("/shops/")
     public List<Shop> getShops() {
+        logger.info("get all shops");
         return new ArrayList<>(shops.values());
     }
 
