@@ -2,6 +2,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
   name: shopper
+  namespace: t20
 spec:
   host: shopper
   subsets:

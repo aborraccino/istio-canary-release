@@ -53,4 +53,9 @@ replicaset.apps/shopper-dd77664c8   2         2         2       33s
 ```
 
 ## Simulate the canary release
-TBD
+
+### k8s native
+- ``kubectl run tmp --image=busybox --restart=Never -i -t --rm -n t20 -- wget -O- -T 3 http://shopper:8080/shops/RST1656``
+
+### istio
+- ``kubectl port-forward service/istio-ingressgateway 8080:80 -n istio-system ``
