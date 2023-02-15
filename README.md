@@ -193,6 +193,7 @@ Let's switch all the traffic to the Shopper v2:
 - apply this change to the cluster with the command ```kubectl apply -f virtual-service.yaml ```
 - run the *curl* command multiple times to check we are getting only the response from the shopper v2: ``curl -m 2 http://localhost:8080/shops/``.
 - You should also see in the Kiali dashboard that the traffic is only routed to the version 2.0:
+
 ![](Graph 2.0.png)
 
 ## Next?
