@@ -25,7 +25,7 @@ In the K8s namespace called *t20* we have:
  - shopper service v2
 
 ## 1.0 vs 2.0
-Both services expose an endpoint ``http://localhost:8080/shops/`` which return a list of shops. The first version
+Both services expose an endpoint ``http://localhost:8080/shops/`` which returns a list of shops. The first version
 return 3 shops and the newer version s one more shop with a new field called *category* as shown below:
 
 ### Shops 1.0
