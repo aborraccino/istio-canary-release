@@ -2,7 +2,7 @@
 Shopper microservice orchestrated with K8s and Istio
 
 ## What is canary release?
-Canary release is an advanced deployment strategy which allow to gradually introduce a new version of a service by routing a small
+Canary release is an advanced deployment strategy which allows to gradually introduce a new version of a service by routing a small
 percentage of the traffic in the first stage and then if all goes well, increase the percentage until the traffic is entirely routed to the new version of the service.
 
 There are other deployment strategies like Blue-Green and A/B Testing used for different purposes.
